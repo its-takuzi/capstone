@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">capstone_project</string>
+    <string name="titile_project">Trash Wise</string>
+    <string name="welcome_home">Discover \nYour Waste Type</string>
+    <string name="search">Search</string>
+    <string name="judul_article">judul article</string>
+    <string name="deskripsi_singkat">deskripsi_singkat</string>
+</resources>
