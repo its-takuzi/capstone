@@ -5,4 +5,8 @@
     <string name="search">Search</string>
     <string name="judul_article">judul article</string>
     <string name="deskripsi_singkat">deskripsi_singkat</string>
+    <string name="find_trash">let\'s discover your waste type</string>
+    <string name="tap_here">Tap Here!</string>
+    <string name="use_camera">Use Camera</string>
+    <string name="analyze">Analyze</string>
 </resources>
