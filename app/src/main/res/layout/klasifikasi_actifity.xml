@@ -7,10 +7,18 @@
     android:orientation="vertical">
 
         <LinearLayout
+            android:background="@color/white"
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progressIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
 
                 <ScrollView
                     android:id="@+id/scrollView2"
@@ -26,7 +34,7 @@
 
                                 <ImageView
                                     android:id="@+id/backbutton"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="26dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="16dp"
                                     android:layout_marginTop="16dp"
@@ -87,11 +95,11 @@
             android:id="@+id/button_camera"
             android:layout_width="300dp"
             android:layout_height="52dp"
-            android:layout_marginTop="580dp"
+            android:layout_marginTop="573dp"
             android:background="@drawable/button_shape"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2"
             tools:ignore="MissingConstraints">
 
                 <LinearLayout
@@ -165,6 +173,4 @@
                             android:textStyle="bold" />
                 </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

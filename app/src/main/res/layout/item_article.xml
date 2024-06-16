@@ -13,56 +13,57 @@
     app:strokeWidth="2dp"
     app:strokeColor="@color/light_blue">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/image_artikel_item"
-            android:layout_width="100dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/kenali_sampah" />
-
-        <LinearLayout
-            android:layout_width="210dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/image_artikel_item"
-            tools:layout_editor_absoluteY="0dp">
-
-            <TextView
-                android:id="@+id/judul_artikel_item"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/judul_article"
-                android:textColor="@color/dark_blue"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"/>
-
-            <TextView
-                android:id="@+id/deskripsi_singkat_item"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/deskripsi_singkat"
-                android:textColor="@color/dark_blue"
-                android:maxLines="4"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:textSize="12sp"/>
-
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="21dp"
+                    android:orientation="horizontal">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_artikel"
+                        app:shapeAppearanceOverlay="@style/cr5"
+                        android:layout_width="120dp"
+                        android:layout_height="106dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/organik_waste"
+                        android:scaleType="fitXY"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="106dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/judul"
+                            android:textColor="#000000"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/judul_article"
+                            />
+                        <TextView
+                            android:id="@+id/deskripsi_singkat"
+                            android:textColor="#000000"
+                            android:textSize="12sp"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/deskripsi_singkat"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+    </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

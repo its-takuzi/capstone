@@ -25,9 +25,13 @@ class Detail_article : AppCompatActivity() {
         setupView()
         Glide.with(applicationContext)
             .load(dataartikel.image)
-            .into(binding.imageArtikel)
-        binding.judulArtikel.text = dataartikel.name
-        binding.deksripsiArtikel.text = dataartikel.deksripsi
+            .into(binding.artikelImage)
+        binding.judul.text = dataartikel.name
+        binding.subjudul1.text = dataartikel.subjudul1
+        binding.subjudul2.text = dataartikel.subjudul2
+        binding.deskripsi1.text = dataartikel.deksripsi1
+        binding.deskripsi2.text = dataartikel.deksripsi2
+        binding.deskripsi3.text = dataartikel.deksripsi3
 
     }
 

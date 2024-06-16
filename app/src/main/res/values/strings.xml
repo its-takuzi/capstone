@@ -11,58 +11,51 @@
     <string name="analyze">Analyze</string>
     <string name="judulartikel">judulartikel</string>
     <string name="deskripsi">deskripsi</string>
+    <string name="anorganik">Anorganik</string>
+    <string name="suggestion">Suggestion</string>
+    <string name="hasil_sugest">Sampah organik adalah jenis sampah yang berasal dari bahan-bahan alami yang dapat terurai secara biologis. Sampah ini biasanya terdiri dari sisa-sisa makanan, daun-daunan, ranting, sisa sayuran, buah-buahan, dan kotoran hewan. Contoh konkret dari sampah organik adalah kulit pisang, potongan sayuran, tulang ikan, dan daun kering. Karena sampah organik berasal dari makhluk hidup, proses penguraiannya dapat terjadi secara alami melalui aktivitas mikroorganisme</string>
+    <string name="empty_image_warning">gambar kosong</string>
 
 
     <string-array name="Judul_article">
-        <item>Berbahaya dan Beracun, Ketahui Lebih Tentang Sampah B3</item>
-        <item>Sampah Organik: Pengertian, Jenis, Contoh, dan Dampaknya</item>
-        <item>Sampah Anorganik: Pengertian, Contoh, dan Cara Mengolahnya</item>
+        <item>Apa Itu Sampah Organik dan Contohnya</item>
+        <item>Apa Itu Sampah Anorganik dan Contohnya</item>
+        <item>Apa Itu Sampah Berbahaya dan Contohnya</item>
     </string-array>
 
-    <string-array name="paragraph_1">
-        <item>Setiap jenis sampah memiliki cara penanganan yang berbeda-beda. Salah satu jenis sampah yang perlu ditangani secara khusus ialah sampah bahan berbahaya dan beracun atau biasa disebut dengan sampah B3. Sampah yang memiliki sifat berbahaya dan beracun ini tidak hanya berbahaya untuk lingkungan apabila dibuang sembarangan, tapi bisa juga berbahaya bagi kesehatan tubuh manusia. Itulah mengapa, pemilahan sampah dari sumber sangat penting. Di zaman modern ini, sampah B3 menjadi momok tersendiri. Melansir data dari Kementerian Lingkungan Hidup dan Kehutanan (KLHK), pada tahun 2021, Indonesia menghasilkan sampah B3 mencapai 60 juta ton dan paling banyak berasal dari limbah industri manufaktur. \n
-            Selain itu, sektor industri pertanian, energi dan gas, juga termasuk dalam tiga besar sektor penghasil limbah B3 di Indonesia \n
-            Apa Itu Sampah B3 dan Jenis-jenisnya \n
-            Sampah B3 dihasilkan dari proses industri, dalam dalam berbagai bentuk, seperti cairan, gas padat atau lumpur. Tapi tidak semua sampah yang berwujud cairan, gas padat dan lumpur adalah sampah berbahaya. Untuk mengetahui apakan sampah tersebut termasuk dalam jenis sampah B3 atau tidak, perlu dilakukan pengujian. Melansir dari Enviromental Protection Agency (EPA) United State, mengidentifikasi sampah B3 berdasarkan wujudnya, baru setelah itu dikaji lebih dalam lagi.Dalam Peraturan Pemerintah No. 101 Tahun 2014 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun, karakter sampah B3 adalah sampah yang mudah meledak, mudah menyala, reaktif, infeksius, korosif, dan/atau beracun. Di dalam peraturan itu juga, sampah B3 dikategorikan menjadi menjadi dua, yaitu: \n
-            1. Limbah B3 Kategori 1 \n
-            Sampah B3 kategori ini memiliki dampak yang cepat dan tiba-tiba, jadi bisa langsung merusak. Contohnya, cairan-cairan kimia berbahaya yang dijadikan campuran dalam berbagai sektor industri. Seperti amonia (bahan pembuat pupuk buatan), benzene (senyawa kimia yang digunakan untuk membuat styrofoam, plastik, karet, cat dan nilon), dan asam sulfat (bahan pengisi aki basah). \n
-            2. Limbah B3 Kategori 2 \n
-            Sedangkan sampah B3 kategori 2, efeknya tidak akut dan dampak yang diberikan tidak langsung. Tapi, risiko dari terpapar sampah jenis ini, efek keberacunannya jangka panjang. Contoh sampah B3 kategori ini adalah sampah pada, seperti barang elektronik bekas, aki, baterai bekas, bahan kedaluwarsa dan lain sebagainya.
-            Selain dari kategorinya, sampah B3 juga dibedakan dari sumbernya, yaitu limbah B3 dari sumber tidak spesifik, dari sumber B3 kedaluwarsa, tumpah, tidak memenuhi spesifikasi dan bekas kemasan, dan yang terakhir bersumber dari sumber yang spesifik (dibedakan lagi menjadi, umum dan khusus). \n
-            Bahaya dan Dampak Sampah B3 \n
-            Meski berbahaya, penggunaan bahan B3 dalam kehidupan sehari-hari merupakan hal biasa asal penggunaannya tepat. Misalnya saja produk-produk hairspray, cairan pembersih kamar mandi, pembasmi serangga, baterai, alat elektronik dan obat-obatan. Produk-produk tersebut bisa menjadi berbahaya jika tidak dikelola dengan benar. Selain merusak lingkungan, sampah B3 juga berbahaya bagi kesehatan manusia.
-            Bahan-bahan yang digunakan dalam berbagai produk dari industri di atas, mengandung logam berat seperti arsin, asam akrilat, asam asetat, asam klorida, amoniak, alumunium klorida, dan masih banyak lagi. Jika dibuang sembarangan, bahan kimia tersebut dapat mencemari tanah, air dan udara. Pada akhirnya, cepat atau lambat, pencemaran itu akan memengaruhi kesehatan dan keberlangsungan hidup manusia. Misalnya saja penyakit kanker, kerusakan sel, penyakit pernapasan dan penyakit lainnya. Untuk itu, pengetahuan tentang sampah b3 harus gencar diinformasikan.\n
-            Pengelolaan Sampah B3 di Indonesia \n
-            Untuk mencegah bahaya dan dampak dari sampah B3, Pemerintah Indonesia membuat aturan mengenai pengelolaan limbah B3 lewat Peraturan Pemerintah No. 101 Tahun 2014 tentang Pengelolaan Limbah Bahan Berbahaya dan Beracun. Terdapat 20 bab dalam peraturan ini, mulai dari aturan mengenai penetapan limbah B3, pengurangan, pemanfaatan, penyimpanan hingga pengelolaannya yang baik dan benar. \n
-            Melalui peraturan ini, pemerintah mengatur siapa saja yang menghasilkan limbah B3 harus memiliki izin dari pemerintah. Pemerintah juga menyarankan penyimpanan sampah B3 sesuai dengan kategori dan sumbernya, juga ada syarat lainnya. Selain itu, dalam PP tersebut juga disebutkan jenis dan kadar bahan kimia yang diperbolehkan, tujuannya agar dampak risiko pemanfaatan limbah B3 dapat dikendalikan. \n
-            Di Indonesia, pengelolaan sampah B3 dilakukan dengan tiga cara, yakni termal, stabilisasi dan solidifikasi dan/atau cara lain sesuai perkembangan teknologi. Dan, perlu digarisbawahi, dalam pengelolaan sampah B3, harus mempertimbangkan banyak hal, di antaranya adalah ketersediaan teknologi, serta standar lingkungan hidup atau baku mutunya. Pengelolaan limbah berbahaya ini harus diikuti dengan izin dari pemerintah, agar pertanggungjawaban jelas.
-            </item>
+    <string-array name="sub_judul1">
+        <item>Bahaya Sampah Organik</item>
+        <item>Bahaya Sampah Anorganik</item>
+        <item>Bahaya Sampah Berbahaya</item>
+    </string-array>
 
-        <item>Sampah organik tergolong sampah ramah lingkungan karena pengolahan sampah organik sangat mudah dan tidak memerlukan biaya mahal. Hasil pengolahan sampah organik dapat dimanfaatkan sebagai pakan ternak dan pupuk kompos. Hasil pembusukan sampah organik sangat baik bagi tanah dan tumbuhan karena mengandung banyak zat hara. Sampah organik banyak dihasilkan oleh lingkungan pemukiman, pasar, dan restoran.\n
-            Pengertian sampah organik \n
-            Sampah organik adalah sampah yang berasal dari sisa makhluk hidup (alam) seperti hewan, manusia, tumbuhan, dan benda hasil olahannya yang dapat mengalami pembusukan atau pelapukan. Proses pembusukan atau pelapukan sampah organik berlangsung secara alami dengan bantuan mikroorganisme tanpa tambahan bahan kimia dalam waktu yang singkat.\n
-            Jenis-jenis sampah organik \n
-            Sampah organik dibagi menjadi dua, yaitu sampah organik basah dan sampah organik kering. Berikut penjelasannya: \n
-            Organik basah \n
-            Sampah organik basah adalah sampah organik yang mempunyai kandungan air yang cukup tinggi. Contohnya kulit buah, sisa sayuran, kulit sayuran, dan biji buah. \n
-            Organik kering \n
-            Sementara sampah organik kering adalah bahan organik yang kandungan airnya kecil. Contoh sampah organik kering di antaranya, kayu atau ranting pohon, dan dedaunan kering, sisik ikan, cangkang kerang, kulit telur, batok kelapa, dan serbuk gergaji. \n
-            Contoh-contoh sampah organik \n
-            Sisa makanan \n
-            Sisa makanan merupakan salah satu contoh sampah organik. Contoh sisa makanan adalah nasi, tulang ikan, kulit buah dan sayur, roti kadaluarsa, dan lain sebagainya. Sampah ini akan membusuk dan diurai oleh mikroorganisme. Nasi yang berada di tempat sampah akan ditumbuhi belatung yang berperan sebagai mikroorganisme pengurai nasi. Inilah peran pengurai, lama-kelamaan nasi akan habis dimakan oleh belatung. \n
-            Dedaunan \n
-            Dedaunan yang jatuh ke tanah dapat menjadi pupuk kompos alami. Daun yang membusuk apabila sudah terurai akan mengandung unsur hara dan mineral yang bermanfaat bagi kesuburan tanah dan tumbuhan. \n
-            Sisa satyuran, kulit buah, dan biji-bijian \n
-            Sisa sayuran yang dimaksud disini adalah bagian dari sayuran yang tidak terpakai. Contohnya adalah batang kangkung yang digunakan, batang brokoli, dan bonggol wortel. Kulit buah juga termasuk sampah organik. Kulit buah yang sering dibuang misalnya kulit papaya, kulit mangga, dan lain sebagainya.  Biji-bijian yang kualitasnya jelek sehingga tidak dimanfaatkan lagi termasuk dalam sampah organik, misalnya biji kacang hijau yang telah membusuk, biji semangka, dan biji nangka\n
-            Kotoran hewan \n
-            Kotoran hewan dapat diolah menjadi pupuk kandang yang dapat menyuburkan tanaman, membuat tanah subur dan gembur\n
-            Bangkai hewan \n
-            Bangkai hewan yang telah terurai juga dapat membantu menyuburkan tanah dan tanaman. \n
-            </item>
+    <string-array name="sub_judul2">
+        <item>Cara Membuang Sampah Organik</item>
+        <item>Cara Membuang Sampah Anorganik</item>
+        <item>Cara Membuang Sampah Berbahaya</item>
+    </string-array>
+
+    <string-array name="deskripsi_1">
+        <item>Sampah organik adalah jenis sampah yang berasal dari bahan-bahan alami yang dapat terurai secara biologis. Sampah ini biasanya terdiri dari sisa-sisa makanan, daun-daunan, ranting, sisa sayuran, buah-buahan, dan kotoran hewan. Contoh konkret dari sampah organik adalah kulit pisang, potongan sayuran, tulang ikan, dan daun kering. Karena sampah organik berasal dari makhluk hidup, proses penguraiannya dapat terjadi secara alami melalui aktivitas mikroorganisme seperti bakteri dan jamur, yang mengubah sampah menjadi bahan yang lebih sederhana dan ramah lingkungan.</item>
+        <item>Sampah anorganik adalah jenis sampah yang berasal dari bahan-bahan non-biodegradable atau tidak dapat terurai secara alami oleh mikroorganisme. Bahan-bahan ini umumnya diproduksi oleh manusia dan memiliki masa pemecahan yang sangat lama di alam. Contoh dari sampah anorganik meliputi plastik, kaca, logam, kertas aluminium, dan berbagai produk elektronik. Botol plastik, kaleng minuman, kantong plastik, dan baterai adalah beberapa contoh konkret dari sampah anorganik yang sering ditemukan dalam kehidupan sehari-hari.</item>
+        <item>Sampah berbahaya, atau limbah B3 (Bahan Berbahaya dan Beracun), adalah jenis limbah yang memiliki potensi untuk menyebabkan kerusakan serius terhadap kesehatan manusia, hewan, dan lingkungan. Sampah ini biasanya mengandung bahan kimia beracun, mudah terbakar, korosif, atau reaktif. Contoh-contoh dari sampah berbahaya meliputi baterai, lampu neon, pestisida, cat, oli bekas, dan limbah medis seperti jarum suntik. Produk-produk rumah tangga seperti pembersih kimia, pelarut, dan lem juga masuk kategori sampah berbahaya jika tidak dikelola dengan benar.</item>
+    </string-array>
+
+    <string-array name="deskripsi_2">
+        <item>Meskipun sampah organik dapat terurai secara alami, jika tidak dikelola dengan baik, sampah ini dapat menimbulkan berbagai masalah lingkungan dan kesehatan. Sampah organik yang menumpuk dan dibiarkan membusuk dapat menghasilkan gas metana, sebuah gas rumah kaca yang sangat berpotensi meningkatkan pemanasan global. Selain itu, penumpukan sampah organik di tempat-tempat terbuka bisa menarik hama seperti lalat dan tikus, yang dapat menyebarkan penyakit kepada manusia. Bau busuk yang dihasilkan oleh pembusukan sampah organik juga dapat mengganggu kenyamanan lingkungan sekitar.</item>
+        <item>Sampah anorganik memiliki dampak yang signifikan terhadap lingkungan dan kesehatan manusia jika tidak dikelola dengan baik. Plastik, misalnya, membutuhkan ratusan hingga ribuan tahun untuk terurai dan dapat mencemari tanah dan air. Sampah plastik yang terbuang di laut dapat mengakibatkan kematian berbagai makhluk laut karena tertelan atau terjerat. Baterai bekas yang mengandung logam berat seperti merkuri dan kadmium dapat merusak tanah dan sumber air, serta berpotensi menimbulkan gangguan kesehatan serius pada manusia seperti keracunan. Selain itu, proses pembakaran sampah anorganik seperti plastik dan karet menghasilkan gas beracun yang berbahaya bagi atmosfer dan kesehatan pernapasan manusia.</item>
+        <item>Sampah berbahaya menimbulkan risiko signifikan bagi kesehatan manusia dan lingkungan. Bahan kimia beracun dalam limbah ini dapat mencemari air tanah dan sungai, yang dapat menyebabkan keracunan pada manusia dan hewan. Baterai bekas, misalnya, mengandung logam berat seperti merkuri dan kadmium yang dapat merusak sistem saraf dan menyebabkan berbagai penyakit kronis jika masuk ke dalam tubuh. Pembakaran sampah berbahaya dapat menghasilkan gas beracun yang merusak kualitas udara dan menimbulkan penyakit pernapasan. Limbah medis, seperti jarum suntik bekas, berpotensi menularkan penyakit menular jika tidak dibuang dengan benar.</item>
+    </string-array>
+
+    <string-array name="deksripsi_3">
+        <item>Pengelolaan sampah organik yang tepat sangat penting untuk mengurangi dampak negatifnya. Salah satu cara efektif adalah dengan membuat kompos dari sampah organik. Kompos adalah hasil penguraian sampah organik yang dapat digunakan sebagai pupuk alami untuk tanaman. Proses pembuatan kompos melibatkan pengumpulan sampah organik, mencacahnya menjadi bagian-bagian kecil, dan mencampurnya dengan bahan-bahan lain seperti tanah atau serbuk gergaji untuk mempercepat proses penguraian. Selain itu, sampah organik juga bisa dibuang ke fasilitas pengolahan sampah yang memiliki sistem pengelolaan khusus untuk menangani limbah jenis ini, seperti biodigester yang mengubah sampah organik menjadi biogas dan pupuk cair.</item>
+        <item>Pengelolaan sampah anorganik yang benar sangat penting untuk mengurangi dampak negatifnya. Salah satu cara yang efektif adalah dengan melakukan daur ulang. Banyak bahan anorganik, seperti plastik, kaca, dan logam, dapat didaur ulang menjadi produk baru. Memisahkan sampah anorganik dari jenis sampah lainnya sejak awal merupakan langkah penting untuk memudahkan proses daur ulang. Selain itu, masyarakat dapat memanfaatkan program-program pengelolaan sampah yang disediakan oleh pemerintah atau lembaga swasta, seperti bank sampah, tempat pengumpulan khusus, dan fasilitas daur ulang. Mengurangi penggunaan bahan-bahan anorganik sekali pakai dan beralih ke alternatif yang lebih ramah lingkungan, seperti tas belanja kain atau botol minum yang dapat digunakan kembali, juga merupakan langkah penting dalam mengurangi produksi sampah anorganik.</item>
+        <item>Pengelolaan sampah berbahaya memerlukan penanganan khusus untuk memastikan keamanan bagi manusia dan lingkungan. Salah satu langkah penting adalah mengidentifikasi dan memisahkan sampah berbahaya dari jenis sampah lainnya sejak awal. Banyak kota memiliki program pengumpulan khusus untuk sampah berbahaya, seperti pusat penampungan limbah B3 atau hari pengumpulan khusus di mana masyarakat bisa membawa sampah berbahaya mereka untuk didaur ulang atau diolah secara aman. Menggunakan produk-produk alternatif yang lebih ramah lingkungan, seperti baterai yang dapat diisi ulang dan pembersih alami, juga membantu mengurangi produksi sampah berbahaya. Selain itu, penting untuk selalu membaca dan mengikuti instruksi pembuangan pada label produk yang mengandung bahan berbahaya.</item>
     </string-array>
 
     <integer-array name="image_artikel">
-        <item>@drawable/berbahaya</item>
         <item>@drawable/organik</item>
+        <item>@drawable/anorganik_waste</item>
+        <item>@drawable/berbahaya</item>
     </integer-array>
 </resources>

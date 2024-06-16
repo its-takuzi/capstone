@@ -4,10 +4,8 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.MovementMethod
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -36,6 +34,7 @@ class Homepage : AppCompatActivity() {
 
         list.addAll(getlistartikel())
         showartikel()
+
     }
 
     private fun showartikel() {
@@ -59,18 +58,37 @@ class Homepage : AppCompatActivity() {
 
     private fun getlistartikel(): Collection<Data_artikel> {
         val judulArtikel = resources.getStringArray(R.array.Judul_article)
-        val deskripsiArtikel = resources.getStringArray(R.array.paragraph_1)
+        val deskripsiArtikel = resources.getStringArray(R.array.deskripsi_1)
         val imageArtikel = resources.obtainTypedArray(R.array.image_artikel)
+        val subjudul1 = resources.getStringArray(R.array.sub_judul1)
+        val subjudul2 = resources.getStringArray(R.array.sub_judul2)
+        val deksripsi2 = resources.getStringArray(R.array.deskripsi_2)
+        val deskripsi3 = resources.getStringArray(R.array.deksripsi_3)
 
-        // Find the minimum length among the arrays
-        val minLength = minOf(judulArtikel.size, deskripsiArtikel.size, imageArtikel.length())
+        val minLength = minOf(
+            judulArtikel.size,
+            deskripsiArtikel.size,
+            deksripsi2.size,
+            deskripsi3.size,
+            subjudul1.size,
+            subjudul2.size,
+            imageArtikel.length()
+        )
 
         val listArtikel = ArrayList<Data_artikel>()
         for (i in 0 until minLength) {
-            val artikel = Data_artikel(judulArtikel[i], deskripsiArtikel[i], imageArtikel.getResourceId(i, -1))
+            val artikel = Data_artikel(
+                judulArtikel[i],
+                deskripsiArtikel[i],
+                deksripsi2[i],
+                deskripsi3[i],
+                subjudul1[i],
+                subjudul2[i],
+                imageArtikel.getResourceId(i, -1)
+            )
             listArtikel.add(artikel)
         }
-        imageArtikel.recycle()  // Remember to recycle the typed array
+        imageArtikel.recycle()
 
         return listArtikel
     }

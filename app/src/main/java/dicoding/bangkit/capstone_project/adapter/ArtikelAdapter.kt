@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import dicoding.bangkit.capstone_project.Data.Data_artikel
 import dicoding.bangkit.capstone_project.R
@@ -19,9 +20,9 @@ class ArtikelAdapter(private val listartikel : ArrayList<Data_artikel>) : Recycl
     }
 
     class listViewHolder(itemsView : View) : RecyclerView.ViewHolder(itemsView) {
-        val imgphoto : ImageView = itemsView.findViewById(R.id.image_artikel_item)
-        val judul : TextView = itemsView.findViewById(R.id.judul_artikel_item)
-        val deskripsi : TextView = itemsView.findViewById(R.id.deskripsi_singkat_item)
+        val imgphoto : ImageView = itemsView.findViewById(R.id.image_artikel)
+        val judul : TextView = itemsView.findViewById(R.id.judul)
+        val deskripsi1 : TextView = itemsView.findViewById(R.id.deskripsi_singkat)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): listViewHolder {
@@ -32,9 +33,9 @@ class ArtikelAdapter(private val listartikel : ArrayList<Data_artikel>) : Recycl
     override fun getItemCount(): Int = listartikel.size
 
     override fun onBindViewHolder(holder: listViewHolder, position: Int) {
-       val (name, desripsi, photo) = listartikel[position]
+       val (name, desripsi1, deskripsi2, deskripsi3, subjudul1, subjudul2, photo) = listartikel[position]
         holder.judul.text = name
-        holder.deskripsi.text = desripsi
+        holder.deskripsi1.text = desripsi1
         holder.imgphoto.setImageResource(photo)
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listartikel[holder.adapterPosition]) }
     }

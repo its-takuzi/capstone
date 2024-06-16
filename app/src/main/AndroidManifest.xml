@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone_project"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.Hasil_klasifikasi.Hasil_klasifikasi"
+            android:exported="false" />
         <activity
             android:name=".ui.Detail_artikel.Detail_article"
             android:exported="false" />
@@ -41,11 +44,8 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
-        </provider>
-
-
-        <!-- Trigger Google Play services to install the backported photo picker module. -->
+                android:resource="@xml/file_paths" />
+        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
         <!-- suppress AndroidDomInspection -->
         <service
             android:name="com.google.android.gms.metadata.ModuleDependencies"

@@ -95,6 +95,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
+                android:background="@color/white"
                 android:layout_height="wrap_content">
 
                 <ImageView
@@ -114,6 +115,7 @@
                     android:layout_width="256dp"
                     android:layout_height="256dp"
                     android:layout_marginTop="12dp"
+                    android:layout_marginBottom="18sp"
                     android:background="@color/white"
                     app:cardCornerRadius="40dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -122,6 +124,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
+                        android:background="@color/white"
                         android:layout_height="match_parent">
 
                         <ImageView
@@ -140,12 +143,14 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
+                android:background="@color/white"
                 android:layout_height="300dp">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_item"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     tools:layout_editor_absoluteX="20dp"
                     tools:listitem="@layout/item_article" />
