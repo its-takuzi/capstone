@@ -15,6 +15,11 @@
     <string name="suggestion">Suggestion</string>
     <string name="hasil_sugest">Sampah organik adalah jenis sampah yang berasal dari bahan-bahan alami yang dapat terurai secara biologis. Sampah ini biasanya terdiri dari sisa-sisa makanan, daun-daunan, ranting, sisa sayuran, buah-buahan, dan kotoran hewan. Contoh konkret dari sampah organik adalah kulit pisang, potongan sayuran, tulang ikan, dan daun kering. Karena sampah organik berasal dari makhluk hidup, proses penguraiannya dapat terjadi secara alami melalui aktivitas mikroorganisme</string>
     <string name="empty_image_warning">gambar kosong</string>
+    <string name="message_login_page">Masukkan dulu datamu ya</string>
+    <string name="title_login_page">Sudah siap untuk upgrade skill?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Masuk</string>
 
 
     <string-array name="Judul_article">
