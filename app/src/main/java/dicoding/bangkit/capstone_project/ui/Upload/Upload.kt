@@ -15,7 +15,6 @@ import dicoding.bangkit.capstone_project.Api.ApiConfig
 import dicoding.bangkit.capstone_project.Helper.getImageUri
 import dicoding.bangkit.capstone_project.Helper.reduceFileImage
 import dicoding.bangkit.capstone_project.Helper.uriToFile
-import dicoding.bangkit.capstone_project.databinding.KlasifikasiActifityBinding
 import dicoding.bangkit.capstone_project.ui.Hasil_klasifikasi.Hasil_klasifikasi
 import dicoding.bangkit.capstone_project.ui.homepage.Homepage
 import okhttp3.MediaType.Companion.toMediaType
@@ -23,7 +22,9 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.load.HttpException
+import com.dicoding.picodiploma.loginwithanimation.data.sharedpreference.sharedpreferencetoken
 import dicoding.bangkit.capstone_project.R
+import dicoding.bangkit.capstone_project.databinding.KlasifikasiActifityBinding
 import dicoding.bangkit.capstone_project.ui.Hasil_klasifikasi.HasilKlasifikasiViewModel
 import kotlinx.coroutines.launch
 
@@ -32,12 +33,16 @@ class Upload : AppCompatActivity() {
     private lateinit var binding : KlasifikasiActifityBinding
     private var currentImageUri : Uri? = null
     private lateinit var viewmodel : HasilKlasifikasiViewModel
+    private lateinit var sharedpreferencetoken: sharedpreferencetoken
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = KlasifikasiActifityBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupView()
+
+        sharedpreferencetoken = sharedpreferencetoken(this)
+
         binding.buttonGalery.setOnClickListener{Startgalery() }
         binding.buttonCamera.setOnClickListener{Startcamera()}
         binding.backbutton.setOnClickListener {
@@ -60,18 +65,18 @@ class Upload : AppCompatActivity() {
                 imageFile.name,
                 requestImageFile
             )
-            val t = "eyJhbGciOiJSUzI1NiIsImtpZCI6ImRmOGIxNTFiY2Q5MGQ1YjMwMjBlNTNhMzYyZTRiMzA3NTYzMzdhNjEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vY2Fwc3RvbmUtYzI0MS1wcjU1NCIsImF1ZCI6ImNhcHN0b25lLWMyNDEtcHI1NTQiLCJhdXRoX3RpbWUiOjE3MTg2MDcyNzMsInVzZXJfaWQiOiJVY2l2NmJETzFpUkU2SXE0dzBCRm5xZ2owZ24yIiwic3ViIjoiVWNpdjZiRE8xaVJFNklxNHcwQkZucWdqMGduMiIsImlhdCI6MTcxODYwNzI3MywiZXhwIjoxNzE4NjEwODczLCJlbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ0ZXN0MkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.kOC9z05LBSawCGGirX5bMk1QtDpBUqP1cUH_pJTx5SmFZ-GegCSTe-v5jfix-6iuLcDcgPgOCn8-sUl1Dm-2FSh6buJ0DHTrTz68I9jUTTVWMpHkIdmGaABXR26L6h8WuF7eNR7_x9BjUCNx2Kbi8AnGki-XCi65zVLVBX-DczmhZjIwQHWCtwdRzYq-VlhwRoCXwc5PA7F4JHXVrFO6o9Bj3_0hMHZmHtaBEi-ycZx9_MT2H3Xd7xb7Dk02aQ5RzIKT_R95KRUR96tUO4SCz7pTPJp78RM2xcV074rYEyIaby2ZBkmH8vQ67eOhMzyFv6oPOOkAqpkHBEbEVNMd6Q"
-            val token = "Bearer $t"
+
             lifecycleScope.launch {
                 try {
                     val apiService = ApiConfig.getApiService()
-                    val klasifikasiResponse = apiService.uploadImage(token, multipartBody)
+                    val klasifikasiResponse = apiService.uploadImage(multipartBody)
                     val result = klasifikasiResponse.data?.result
                     val suggestion = klasifikasiResponse.data?.suggestion
 
                     val intent = Intent(this@Upload, Hasil_klasifikasi::class.java).apply {
                         putExtra("EXTRA_RESULT", result)
                         putExtra("EXTRA_SUGGESTION", suggestion)
+                        putExtra("EXTRA_IMAGE_URI", currentImageUri.toString())
                     }
                     startActivity(intent)
                     showLoading(false)

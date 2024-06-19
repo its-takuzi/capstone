@@ -35,13 +35,13 @@ data class ProviderDataItem(
 	val phoneNumber: Any? = null,
 
 	@field:SerializedName("providerId")
-	val providerId: String? = null,
+	val providerId: String,
 
 	@field:SerializedName("displayName")
 	val displayName: String,
 
 	@field:SerializedName("email")
-	val email: String? = null
+	val email: String
 )
 
 data class User(

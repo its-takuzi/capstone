@@ -20,6 +20,27 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Masuk</string>
+    <string name="message_welcome_page">Mau belajar Android, iOS, Machine Learning, Cloud, Front-End, Back-End, dan bidang IT lainnya? Di Dicoding aja!</string>
+    <string name="title_welcome_page">Selamat datang di Dicoding!</string>
+    <string name="signup">Daftar</string>
+    <string name="title_login">Welcome To Trashwise\nLets find your type of trash!!</string>
+    <string name="login_des">Please sign in to keep scrolling</string>
+    <string name="inputEmail">Input Email</string>
+    <string name="inputPassword">Input Password</string>
+    <string name="signIn">SignIn</string>
+    <string name="title_register">Register</string>
+    <string name="register_des">Register now to keep scrolling and experiencing share story</string>
+    <string name="name">Name</string>
+    <string name="inputName">Enter Your Name</string>
+    <string name="signUp">Register</string>
+    <string name="or">Do not have account yet? Feel free to sign up!</string>
+    <string name="or2">Or do you already have an account? Feel free to signin!</string>
+    <string name="description">Description</string>
+    <string name="image_detail">Image Detail</string>
+    <string name="logout">Logout</string>
+    <string name="upload">Upload Now</string>
+    <string name="camera">Take from Camera</string>
+    <string name="galery">Gallery</string>
 
 
     <string-array name="Judul_article">

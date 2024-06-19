@@ -1,30 +1,38 @@
 package dicoding.bangkit.capstone_project.ui.homepage
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dicoding.picodiploma.loginwithanimation.data.sharedpreference.sharedpreferencetoken
 import dicoding.bangkit.capstone_project.Data.Data_artikel
 import dicoding.bangkit.capstone_project.R
 import dicoding.bangkit.capstone_project.adapter.ArtikelAdapter
 import dicoding.bangkit.capstone_project.databinding.HomeActifityBinding
 import dicoding.bangkit.capstone_project.ui.Detail_artikel.Detail_article
 import dicoding.bangkit.capstone_project.ui.Upload.Upload
+import dicoding.bangkit.capstone_project.ui.Welcomee.welcome
 
 class Homepage : AppCompatActivity() {
 
     private lateinit var binding : HomeActifityBinding
     private lateinit var artikel : RecyclerView
     private val list = ArrayList<Data_artikel>()
+    private lateinit var sharedpreferencetoken: sharedpreferencetoken
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = HomeActifityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharedpreferencetoken = sharedpreferencetoken(this)
+
         setupView()
         binding.fabAdd.setOnClickListener{
             startActivity(Intent(this@Homepage, Upload::class.java))
@@ -32,8 +40,17 @@ class Homepage : AppCompatActivity() {
         artikel = findViewById(R.id.rv_item)
         artikel.setHasFixedSize(true)
 
+
         list.addAll(getlistartikel())
         showartikel()
+
+
+        binding.logout.setOnClickListener{
+            val intent = Intent(this@Homepage , welcome::class.java)
+            sharedpreferencetoken.clearData()
+            startActivity(intent)
+            finish()
+        }
 
     }
 

@@ -8,86 +8,59 @@ import android.util.AttributeSet
 import android.util.Patterns
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
-class myedittext : AppCompatEditText {
+class myedittext @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null
+) : TextInputEditText(context, attrs) {
+    var isEmailValid = false
+    var isPasswordValid = false
+    var isUsernameValid = false
 
-    var isEmailValid: Boolean = false
-    var isPasswordValid: Boolean = false
-    var isUsernameValid : Boolean = false
-
-    constructor(context: Context): super(context)
-
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
-
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
-        context,
-        attrs,
-        defStyleAttr
-    )
-
-    override fun onDraw(canvas: Canvas) {
-        super.onDraw(canvas)
-        textAlignment = View.TEXT_ALIGNMENT_VIEW_START
-        val layoutParams = layoutParams
-        setLayoutParams(layoutParams)
-        setPadding(10, 0, 10, 0)
-    }
-
-    fun validateInput(inputType: Int) {
+    init {
         addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-
-            }
-
-            override fun afterTextChanged(s: Editable) {
-                val inputText = s.toString().trim()
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val input = s.toString()
                 when (inputType) {
-                    0 -> validateEmail(inputText)
-                    1 -> validatePassword(inputText)
-                    2 -> validateUsername(inputText)
+                    password -> {
+                        isPasswordValid = input.length >= 8
+                        (parent.parent as? TextInputLayout)?.error = if (!isPasswordValid) {
+                            "Password tidak boleh kurang dari 8 karakter"
+                        } else {
+                            null
+                        }
+                    }
+
+                    email -> {
+                        isEmailValid = Patterns.EMAIL_ADDRESS.matcher(input).matches()
+                        (parent.parent as? TextInputLayout)?.error = if (!isEmailValid) {
+                            "Masukkan email dengan benar"
+                        } else {
+                            null
+                        }
+                    }
+
+                    username -> {
+                        isUsernameValid = input.length >= 5
+                        (parent.parent as? TextInputLayout)?.error = if (!isUsernameValid) {
+                            "Username tidak boleh kurang dari 5 karakter"
+                        } else {
+                            null
+                        }
+                    }
                 }
             }
+
+            override fun afterTextChanged(s: Editable?) {}
         })
     }
 
-    fun validateEmail(email: String) {
-
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches() && email.isNotEmpty()) {
-            error = "Invalid Email"
-            isEmailValid = false
-
-        } else if (email.isEmpty()) {
-            isEmailValid = false
-            error = "Email can't be empty"
-        } else {
-            isEmailValid = true
-        }
-
-    }
-
-    fun validatePassword(password : String) {
-
-        if (password.isEmpty()) {
-            error = "Password Can't be empty"
-            isPasswordValid = false
-        } else if (password.length in 1..7) {
-            error = "Password must at least 8 chars"
-            isPasswordValid = false
-        } else {
-            isPasswordValid = true
-        }
-
-    }
-
-    fun validateUsername(username : String){
-        if (username.isEmpty()) {
-            error = "Username Can't be empty"
-            isUsernameValid = false
-        }else  {
-            isUsernameValid = true
-        }
+    companion object {
+        const val password = 0x00000081
+        const val email = 0x00000021
+        const val username = 0x00000001
     }
 }

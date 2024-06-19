@@ -17,14 +17,20 @@
         android:theme="@style/Theme.Capstone_project"
         tools:targetApi="31">
         <activity
-            android:name=".ui.Login.Login"
+            android:name=".ui.register.Register"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Welcomee.welcome"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.Login.Login"
+            android:exported="false" />
         <activity
             android:name=".ui.Hasil_klasifikasi.Hasil_klasifikasi"
             android:exported="false" />

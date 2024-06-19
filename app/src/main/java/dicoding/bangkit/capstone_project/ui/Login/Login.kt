@@ -6,21 +6,25 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.picodiploma.loginwithanimation.data.sharedpreference.sharedpreferencetoken
-import dicoding.bangkit.capstone_project.Api.Login
 import dicoding.bangkit.capstone_project.databinding.ActivityLoginBinding
 import dicoding.bangkit.capstone_project.ui.homepage.Homepage
+import dicoding.bangkit.capstone_project.Api.loginRequest
+import dicoding.bangkit.capstone_project.ui.register.Register
 
 class Login : AppCompatActivity() {
 
     private lateinit var binding : ActivityLoginBinding
     private lateinit var viewModel: LoginViewModel
     private lateinit var sharedpreferencetoken: sharedpreferencetoken
+    private var token : String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,23 +33,27 @@ class Login : AppCompatActivity() {
 
         sharedpreferencetoken = sharedpreferencetoken(this)
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-
+        token = sharedpreferencetoken.getToken()
         setupView()
-        binding.emailEditText.validateInput(0)
-        binding.passwordEditText.validateInput(1)
-        validatelogin()
         playAnimation()
+        validatelogin()
+
+
+        binding.signUp.setOnClickListener {
+            startActivity(Intent(this, Register::class.java))
+        }
+
     }
 
     private fun validatelogin(){
-        binding.loginButton.setOnClickListener{
-            val email = binding.emailEditText
-            val password = binding.passwordEditText
+        binding.btnSignIn.setOnClickListener{
+            val email = binding.inputEmail
+            val password = binding.inputPassword
             if (email.text.toString().isEmpty() || password.text.toString().isEmpty()){
                 Toast.makeText(this, "Pastikan anda telah mengisi input email dan password!", Toast.LENGTH_SHORT).show()
             }
             if (email.isEmailValid && password.isPasswordValid){
-                viewModel.postlogin(Login(email.text.toString(), password.text.toString()))
+                viewModel.postlogin(loginRequest(email.text.toString(), password.text.toString()))
                 viewModel.loginResponse.observe(this){ response ->
                     showLoading(false)
                     response?.let {
@@ -59,9 +67,11 @@ class Login : AppCompatActivity() {
                             startActivity(Intent(this, Homepage::class.java))
                             finish()
                         } else {
+                            Log.d("TAG", "userCredential is null")
                             Toast.makeText(this, "Login Failed. Try Again!", Toast.LENGTH_SHORT).show()
                         }
                     } ?: run {
+                        Log.d("TAG", "Response is null")
                         Toast.makeText(this, "Login Failed. Try Again!", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -70,6 +80,7 @@ class Login : AppCompatActivity() {
             }
         }
     }
+
 
     private fun setupView() {
         @Suppress("DEPRECATION")
@@ -84,45 +95,41 @@ class Login : AppCompatActivity() {
         supportActionBar?.hide()
     }
     private fun playAnimation() {
-        ObjectAnimator.ofFloat(binding.imageView, View.TRANSLATION_X, -30f, 30f).apply {
-            duration = 6000
-            repeatCount = ObjectAnimator.INFINITE
-            repeatMode = ObjectAnimator.REVERSE
-        }.start()
+        val duration = 380L
 
-        val title = ObjectAnimator.ofFloat(binding.titleTextView, View.ALPHA, 1f).setDuration(100)
-        val message =
-            ObjectAnimator.ofFloat(binding.messageTextView, View.ALPHA, 1f).setDuration(100)
-        val emailTextView =
-            ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(100)
-        val emailEditTextLayout =
-            ObjectAnimator.ofFloat(binding.emailEditTextLayout, View.ALPHA, 1f).setDuration(100)
-        val passwordTextView =
-            ObjectAnimator.ofFloat(binding.passwordTextView, View.ALPHA, 1f).setDuration(100)
-        val passwordEditTextLayout =
-            ObjectAnimator.ofFloat(binding.passwordEditTextLayout, View.ALPHA, 1f).setDuration(100)
-        val login = ObjectAnimator.ofFloat(binding.loginButton, View.ALPHA, 1f).setDuration(100)
+        val title = ObjectAnimator.ofFloat(binding.tvTitle, View.ALPHA, 1f).setDuration(duration)
+        val titleDesc =
+            ObjectAnimator.ofFloat(binding.tvLoginDes, View.ALPHA, 1f).setDuration(duration)
+        val email = ObjectAnimator.ofFloat(binding.tvEmail, View.ALPHA, 1f).setDuration(duration)
+        val inputEmail =
+            ObjectAnimator.ofFloat(binding.inputEmailLayout, View.ALPHA, 1f).setDuration(duration)
+        val password =
+            ObjectAnimator.ofFloat(binding.tvPassword, View.ALPHA, 1f).setDuration(duration)
+        val inputPassword = ObjectAnimator.ofFloat(binding.inputPasswordLayout, View.ALPHA, 1f)
+            .setDuration(duration)
+        val btnSignIn =
+            ObjectAnimator.ofFloat(binding.btnSignIn, View.ALPHA, 1f).setDuration(duration)
+        val tvOr = ObjectAnimator.ofFloat(binding.tvOr, View.ALPHA, 1f).setDuration(duration)
+        val signUp = ObjectAnimator.ofFloat(binding.signUp, View.ALPHA, 1f).setDuration(duration)
 
         AnimatorSet().apply {
             playSequentially(
                 title,
-                message,
-                emailTextView,
-                emailEditTextLayout,
-                passwordTextView,
-                passwordEditTextLayout,
-                login
+                titleDesc,
+                email,
+                inputEmail,
+                password,
+                inputPassword,
+                btnSignIn,
+                tvOr,
+                signUp
             )
-            startDelay = 100
-        }.start()
+            start()
+        }
     }
 
-    private fun showLoading(state : Boolean){
-        if(state){
-            binding.pbProgressBar.visibility = View.VISIBLE
-        }else{
-            binding.pbProgressBar.visibility = View.GONE
-        }
+    private fun showLoading(state: Boolean) {
+        binding.progressBar.isVisible = state
     }
 
 }

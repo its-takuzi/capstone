@@ -1,10 +1,12 @@
 package dicoding.bangkit.capstone_project.ui.Hasil_klasifikasi
 
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.ImageView
 import android.widget.TextView
 import dicoding.bangkit.capstone_project.databinding.HasilKlasifikasiBinding
 import androidx.activity.viewModels
@@ -20,13 +22,18 @@ class Hasil_klasifikasi : AppCompatActivity() {
         binding = HasilKlasifikasiBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel.result.observe(this) { result ->
-            findViewById<TextView>(R.id.hasil_tipe).text = result
+        val result = intent.getStringExtra("EXTRA_RESULT")
+        val suggestion = intent.getStringExtra("EXTRA_SUGGESTION")
+        val imageUriString = intent.getStringExtra("EXTRA_IMAGE_URI")
+
+        findViewById<TextView>(R.id.hasil_tipe).text = result
+        findViewById<TextView>(R.id.hasil_sugestion).text = suggestion
+        imageUriString?.let { uriString ->
+            val imageUri = Uri.parse(uriString)
+            findViewById<ImageView>(R.id.image_klasifikasi).setImageURI(imageUri)
         }
 
-        viewModel.suggestion.observe(this) { suggestion ->
-            findViewById<TextView>(R.id.hasil_sugestion).text = suggestion
-        }
+
         setupView()
     }
 
