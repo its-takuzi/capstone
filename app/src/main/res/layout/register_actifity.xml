@@ -201,7 +201,7 @@
         android:textStyle="bold"
         android:layout_marginTop="12dp"
         android:alpha="0"
-        android:text="@string/signIn"
+        android:text="@string/login"
         android:textColor="@color/light_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

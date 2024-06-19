@@ -66,10 +66,13 @@ class Upload : AppCompatActivity() {
                 requestImageFile
             )
 
+            val t = sharedpreferencetoken.getToken().toString()
+            val token = "Bearer $t"
+
             lifecycleScope.launch {
                 try {
                     val apiService = ApiConfig.getApiService()
-                    val klasifikasiResponse = apiService.uploadImage(multipartBody)
+                    val klasifikasiResponse = apiService.uploadImage(token, multipartBody)
                     val result = klasifikasiResponse.data?.result
                     val suggestion = klasifikasiResponse.data?.suggestion
 

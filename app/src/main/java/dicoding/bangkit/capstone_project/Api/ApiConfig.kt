@@ -16,7 +16,7 @@ object ApiConfig {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl("https://no-login-yiwoznkhhq-et.a.run.app/")
+            .baseUrl("https://new-my-trash-yiwoznkhhq-et.a.run.app/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

@@ -1,11 +1,9 @@
 package dicoding.bangkit.capstone_project.ui.homepage
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -67,7 +65,6 @@ class Homepage : AppCompatActivity() {
     }
 
     private fun showdataartikel(data: Data_artikel) {
-        Toast.makeText(this, "Kamu memilih " + data.name, Toast.LENGTH_SHORT).show()
         val moveWithObjectIntent = Intent(this@Homepage, Detail_article::class.java)
         moveWithObjectIntent.putExtra(Detail_article.EXTRA_DATA_ARTIKEL, data)
         startActivity(moveWithObjectIntent)

@@ -11,6 +11,7 @@ interface ApiService {
     @Multipart
     @POST("predict")
     suspend fun uploadImage(
+        @Header("Authorization")token :String,
         @Part file: MultipartBody.Part,
     ): KlasifikasiResponse
 
