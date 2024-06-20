@@ -51,6 +51,8 @@ class Upload : AppCompatActivity() {
         binding.buttonAnalyze.setOnClickListener{
            classifyImage()
         }
+        val t = sharedpreferencetoken.getToken()
+        val token = " Bearer $t"
     }
 
     private fun classifyImage() {
@@ -67,12 +69,13 @@ class Upload : AppCompatActivity() {
             )
 
             val t = sharedpreferencetoken.getToken().toString()
-            val token = "Bearer $t"
+            val token = " Bearer $t"
 
             lifecycleScope.launch {
                 try {
                     val apiService = ApiConfig.getApiService()
-                    val klasifikasiResponse = apiService.uploadImage(token, multipartBody)
+                     println(apiService)
+                    val klasifikasiResponse = apiService.uploadImage(token ,multipartBody)
                     val result = klasifikasiResponse.data?.result
                     val suggestion = klasifikasiResponse.data?.suggestion
 
